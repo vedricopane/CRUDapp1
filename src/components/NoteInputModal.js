@@ -35,7 +35,9 @@ const NoteInputModal = ({visible, onClose, onSubmit}) => {
   };
 
   const closeModal = () => {
-    
+    setTitle('');
+    setDesc('');
+    onClose();
   }
 
   return (
@@ -68,7 +70,7 @@ const NoteInputModal = ({visible, onClose, onSubmit}) => {
               antIconName="close"
               size={30}
               style={{marginLeft: 30}}
-              onPress={onClose}
+              onPress={closeModal}
             /> : null}
           </View>
         </View>
